@@ -1,6 +1,7 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
+import ProductDetails from "@/components/store/ProductDetails.astro";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -8,8 +9,8 @@ import { AstroSeo } from "@astrolib/seo";
 Use AstroSeo in all the pages you want different Seo than the index page
 -->
 <AstroSeo
-  title="Overview"
-  description="Your site description goes here"
+  title="Product page"
+  description="Your site or page description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
     url: "https://www.lexingtonthemes.com",
@@ -42,5 +43,5 @@ Use AstroSeo in all the pages you want different Seo than the index page
   }}
 />
 <BaseLayout>
-
+  <ProductDetails />
 </BaseLayout>

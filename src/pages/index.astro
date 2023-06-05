@@ -1,15 +1,18 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/landing/Hero.astro";
-import Description from "../components/landing/Description.astro";
-import Screenshots from "../components/landing/Screenshots.astro";
-import Faq from "../components/landing/Faq.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Landing from "@/components/landing/Landing.astro";
+import Work from "@/components/landing/Work.astro";
+import Whatwedo from "@/components/landing/Whatwedo.astro";
+import Services from "@/components/landing/Services.astro";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
 <AstroSeo
-  title="About Michael Andreuzza"
-  description="Your site description goes here"
+  title="Home"
+  description="Your site or page description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
     url: "https://www.lexingtonthemes.com",
@@ -42,6 +45,8 @@ import { AstroSeo } from "@astrolib/seo";
   }}
 />
 <BaseLayout>
-  <Hero />
-  
+  <Landing />
+  <Work />
+  <Whatwedo />
+  <Services />
 </BaseLayout>

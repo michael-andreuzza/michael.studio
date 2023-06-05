@@ -1,17 +1,19 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+
+import SubsCta from "@/components/forms/SubsCta.astro";
 const { frontmatter } = Astro.props;
 import { AstroSeo } from "@astrolib/seo";
 ---
 
 <AstroSeo
   title={frontmatter.title}
-  description={frontmatter.description}
+  description={frontmatter.title}
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
     url: "https://www.lexingtonthemes.com",
     title: "Title}",
-    description: "{frontmatter.description}",
+    description: "Description",
     images: [
       {
         url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
@@ -39,23 +41,51 @@ import { AstroSeo } from "@astrolib/seo";
   }}
 />
 <BaseLayout>
-  <div
-    class="mx-auto hover:prose-a:text-black prose prose-a:text-accent-500 prose-blockquote:border-l-black prose-blockquote:text-slate-500 prose-code:text-black prose-headings:font-bold prose-headings:text-black prose-headings:tracking-tighter prose-li:marker:text-accent-500 text-slate-500 py-24 prose-pre:border">
-    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <section>
+    <div class="mx-auto max-w-7xl px-8 py-12 lg:py-32">
+      <div class="space-y-24">
+        <header class="flex flex-col max-w-3xl mx-auto">
+          <h1
+            class="text-3xl lg:text-6xl mt-12 font-light font-display text-white uppercase">
+            {frontmatter.title}
+          </h1>
 
-    <p>{frontmatter.title}</p>
-    <p><em>{frontmatter.description}</em></p>
-    <p>Written by: {frontmatter.author}</p>
-    <div class="flex flex-wrap gap-3 mt-12">
-      {
-        frontmatter.tags.map((tag) => (
-          <span class="inline-flex items-center text-sm font-light text-black dark:text-white  underline hover:text-accent-300">
-            <a href={`/tags/${tag}`}>{tag}</a>
-          </span>
-        ))
-      }
+          <div class="mt-2 relative flex items-center gap-x-4">
+            <div class="text-sm leading-6 inline-flex items-center gap-3">
+              <p class="font-semibold text-zinc-500 font-display uppercase">
+                <span class="absolute inset-0"></span>
+                {frontmatter.author}
+              </p>
+              <p class="text-zinc-500">
+                <time datetime={frontmatter.pubDate.toString().slice(0, 10)}>
+                  <span>{frontmatter.pubDate.toString().slice(0, 10)}</span>
+                </time>
+              </p>
+            </div>
+          </div>
+          <p class="text-zinc-500 mt-8">
+            <em>{frontmatter.description}</em>
+          </p>
+
+          <div class="flex flex-wrap gap-6 mt-12">
+            {
+              frontmatter.tags.map((tag) => (
+                <span class="inline-flex items-center text-sm font-light text-white    underline hover:text-accent-300">
+                  <a href={`/tags/${tag}`}>{tag}</a>
+                </span>
+              ))
+            }
+          </div>
+        </header>
+
+        <div
+          class="mt-8 max-w-3xl prose prose-p:text-zinc-500 prose-p: prose-headings:text-white prose-headings: prose-headings:font-display prose-strong:text-white prose-strong: prose-code:text-white prose-code: mx-auto prose-ol:text-zinc-500 prose-ul:text-zinc-500 prose-pre:border first-letter:text-7xl first-letter:font-display first-line:uppercase first-line:tracking-widest first-letter:mr-3 first-letter:float-left font-display prose-a: first-line:font-display prose-img:border prose-img:border-white/10 prose-pre:rounded-none">
+          <slot />
+        </div>
+        <div class="mx-auto max-w-3xl">
+          <SubsCta />
+        </div>
+      </div>
     </div>
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-    <slot />
-  </div>
+  </section>
 </BaseLayout>

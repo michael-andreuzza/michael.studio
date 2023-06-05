@@ -1,0 +1,161 @@
+<section>
+  <div
+    class="mx-auto max-w-7xl px-8 py-12"
+    x-data="{ init() {
+            new Splide(this.$refs.splide, {
+                perPage: 1,
+                gap: '0.5rem',
+                breakpoints: {
+                    640: {
+                        perPage: 1,
+                    },
+                },
+                
+            }).mount()
+        },
+    }">
+    <section
+      class="splide is-initialized splide--slide splide--ltr splide--draggable is-active"
+      aria-label="Splide/Alpine.js"
+      x-ref="splide"
+      id="splide01"
+      aria-roledescription="carousel">
+      <div class="splide__arrows splide__arrows--ltr">
+        <button
+          class="splide__arrow splide__arrow--prev"
+          type="button"
+          aria-label="Previous slide"
+          aria-controls="splide01-track"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 40 40"
+            width="40"
+            height="40"
+            focusable="false"
+            ><path
+              d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+            ></path></svg
+          ></button
+        ><button
+          class="splide__arrow splide__arrow--next"
+          type="button"
+          disabled=""
+          aria-label="Next slide"
+          aria-controls="splide01-track"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 40 40"
+            width="40"
+            height="40"
+            focusable="false"
+            ><path
+              d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+            ></path></svg
+          ></button
+        >
+      </div><div
+        class="h-full splide__track splide__track--slide splide__track--ltr splide__track--draggable"
+        id="splide01-track"
+        style="padding-left: 0px; padding-right: 0px;"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-busy="false">
+        <ul
+          class="splide__list"
+          id="splide01-list"
+          role="presentation"
+          style="transform: translateX(-2040px);">
+          <li
+            class="items-center flex justify-center flex-col pb-8 splide__slide"
+            id="splide01-slide01"
+            role="tabpanel"
+            aria-roledescription="slide"
+            aria-label="1 of 4"
+            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
+            aria-hidden="true">
+            <img
+              alt="placeholder image"
+              class="w-full border h-96 object-cover object-top"
+              src="https://cdn.dribbble.com/userupload/6241891/file/original-4ac07bf7da62bba15e251b3803f47a82.png?compress=1&resize=2048x1365"
+            />
+          </li><li
+            class="items-center flex justify-center flex-col pb-8 splide__slide"
+            id="splide01-slide02"
+            role="tabpanel"
+            aria-roledescription="slide"
+            aria-label="2 of 4"
+            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
+            aria-hidden="true">
+            <img
+              alt="placeholder image"
+              class="w-full border h-96 object-cover object-top"
+              src="https://cdn.dribbble.com/userupload/4819310/file/original-741134f4a4757e03b520a99bf04bbbcf.png?compress=1&resize=1504x1003"
+            />
+          </li><li
+            class="items-center flex justify-center flex-col pb-8 splide__slide is-prev"
+            id="splide01-slide03"
+            role="tabpanel"
+            aria-roledescription="slide"
+            aria-label="3 of 4"
+            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
+            aria-hidden="true">
+            <img
+              alt="placeholder image"
+              class="w-full border h-96 object-cover object-top"
+              src="https://cdn.dribbble.com/userupload/4796682/file/original-e4775128a010cd82a7fbdd135a4d4430.png?compress=1&resize=1504x1003"
+            />
+          </li><li
+            class="items-center flex justify-center flex-col pb-8 splide__slide is-active is-visible"
+            id="splide01-slide04"
+            role="tabpanel"
+            aria-roledescription="slide"
+            aria-label="4 of 4"
+            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);">
+            <img
+              alt="placeholder image"
+              class="w-full border h-96 object-cover object-top"
+              src="https://cdn.dribbble.com/userupload/4995889/file/original-055d2d9caa02bc5078cecefc4ac3f3ad.png?compress=1&resize=1504x1003"
+            />
+          </li>
+        </ul>
+      </div><ul
+        class="splide__pagination splide__pagination--ltr"
+        role="tablist"
+        aria-label="Select a slide to show">
+        <li role="presentation">
+          <button
+            class="splide__pagination__page"
+            type="button"
+            role="tab"
+            aria-controls="splide01-slide01"
+            aria-label="Go to slide 1"
+            tabindex="-1"></button>
+        </li><li role="presentation">
+          <button
+            class="splide__pagination__page"
+            type="button"
+            role="tab"
+            aria-controls="splide01-slide02"
+            aria-label="Go to slide 2"
+            tabindex="-1"></button>
+        </li><li role="presentation">
+          <button
+            class="splide__pagination__page"
+            type="button"
+            role="tab"
+            aria-controls="splide01-slide03"
+            aria-label="Go to slide 3"
+            tabindex="-1"></button>
+        </li><li role="presentation">
+          <button
+            class="splide__pagination__page is-active"
+            type="button"
+            role="tab"
+            aria-controls="splide01-slide04"
+            aria-label="Go to slide 4"
+            aria-selected="true"></button>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>

@@ -1,13 +1,16 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import EntriesOne from "../components/entries/EntriesOne.astro";
 const allPosts = await getCollection("posts");
+import EntriesTwo from "@/components/entries/EntriesTwo.astro";
+import Subscribe from "@/components/forms/Subscribe.astro";
+import SubsCta from "@/components/forms/SubsCta.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
 import { AstroSeo } from "@astrolib/seo";
 ---
 
 <AstroSeo
-  title="blog 2"
+  title="Blog 2"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -42,14 +45,21 @@ import { AstroSeo } from "@astrolib/seo";
 />
 <BaseLayout>
   <section>
-    <div class="px-8 md:px-12 mx-auto max-w-7xl py-12 lg:py-32">
-      <ul
-        class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-3 gap-y-24 lg:gap-x-6">
+    <div class="mx-auto max-w-7xl px-8 py-12 lg:py-32 space-y-24">
+      <div class="mx-auto max-w-3xl">
+        <h1 class="text-3xl lg:text-7xl font-light font-display text-white">
+          Me and my thoughts
+        </h1>
+        <div class="flex max-w-sm flex-col mt-6">
+          <Subscribe />
+        </div>
+      </div>
+      <div class="grid gap-y-12 mx-auto max-w-3xl">
         {
           allPosts
             .slice()
             .map((post) => (
-              <EntriesOne
+              <EntriesTwo
                 url={"/posts/" + post.slug}
                 title={post.data.title}
                 description={post.data.description}
@@ -60,7 +70,10 @@ import { AstroSeo } from "@astrolib/seo";
               />
             ))
         }
-      </ul>
+      </div>
+      <div class="mx-auto max-w-3xl">
+        <SubsCta />
+      </div>
     </div>
   </section>
 </BaseLayout>

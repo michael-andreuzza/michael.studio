@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogPost from "../../components/BlogPost.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPost from "@/components/BlogPost.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -26,28 +26,25 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle={tag}>
   <section>
-    <div class="px-8 mx-auto max-w-7xl lg:px-24 py-12 lg:py-32">
-      <p>Posts tagged with {tag}</p>
-      <ol role="list" class="mt-16 space-y-10 sm:space-y-16">
-        <li>
-          <ol
-            role="list"
-            class="mt-8 divide-y divide-slate-300/30 rounded-2xl bg-slate-50 py-3 px-6 text-base tracking-tight sm:py-7 sm:px-8">
-            {
-              posts.map((post) => (
-                <li
-                  class="flex justify-between py-3"
-                  aria-label="Strokes and fills on page 21">
-                  <BlogPost
-                    url={"/posts/" + post.slug}
-                    title={post.data.title}
-                  />
-                </li>
-              ))
-            }
-          </ol>
-        </li>
-      </ol>
+    <div class="mx-auto max-w-7xl px-8 py-12 lg:py-32">
+      <div class="max-w-3xl mx-auto space-y-24">
+        <div>
+          <h1 class="text-3xl lg:text-6xl font-display text-white uppercase">
+            Posts tagged with {tag}
+          </h1>
+        </div>
+        <div>
+          {
+            posts.map((post) => (
+              <BlogPost
+                url={"/posts/" + post.slug}
+                title={post.data.title}
+                description={post.data.description}
+              />
+            ))
+          }
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

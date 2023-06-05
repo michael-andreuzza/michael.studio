@@ -1,0 +1,48 @@
+---
+import { store } from "../../data/store.json";
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-8 py-12 lg:py-32 space-y-24">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-3xl lg:text-7xl font-light font-display text-white">
+        The store
+      </h1>
+      <div class="mt-6 space-y-6 text-zinc-500 text-lg font-light">
+        <p>Look around and see if you find something that you need.</p>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-24 max-w-3xl mx-auto">
+      {
+        store.map((template) => (
+          <>
+            <a href={template.link}>
+              <div>
+                <div class="aspect-[280/200] bg-zinc-100  overflow-hidden">
+                  <img
+                    class="object-cover h-full w-full"
+                    alt={template.name}
+                    src={template.image}
+                  />
+                </div>
+                <div>
+                  <div class="inline-flex items-center justify-between w-full">
+                    <div>
+                      <h2 class="text-sm font-semibold text-white     mt-4 relative font-display">
+                        {template.name}
+                      </h2>
+                      <p class="relative z-10 mt-2 text-xs text-zinc-500   ">
+                        {template.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>

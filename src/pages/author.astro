@@ -1,11 +1,15 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Author from "@/components/about/Author.astro";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
 <AstroSeo
   title="Author"
-  description="Your site description goes here"
+  description="Your site or page description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
     url: "https://www.lexingtonthemes.com",
@@ -38,5 +42,5 @@ import { AstroSeo } from "@astrolib/seo";
   }}
 />
 <BaseLayout>
-
+  <Author />
 </BaseLayout>
