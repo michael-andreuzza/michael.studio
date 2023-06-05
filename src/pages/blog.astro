@@ -2,13 +2,9 @@
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 import EntriesOne from "@/components/entries/EntriesOne.astro";
-import SubsCta from "@/components/forms/SubsCta.astro";
-import Subscribe from "@/components/forms/Subscribe.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
 import { AstroSeo } from "@astrolib/seo";
 ---
-
 <AstroSeo
   title="Blog 1"
   description="Your site description goes here"
