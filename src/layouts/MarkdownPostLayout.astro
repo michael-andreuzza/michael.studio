@@ -1,11 +1,8 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-
-import SubsCta from "@/components/forms/SubsCta.astro";
 const { frontmatter } = Astro.props;
 import { AstroSeo } from "@astrolib/seo";
 ---
-
 <AstroSeo
   title={frontmatter.title}
   description={frontmatter.title}
@@ -49,7 +46,6 @@ import { AstroSeo } from "@astrolib/seo";
             class="text-3xl lg:text-6xl mt-12 font-light font-display text-white uppercase">
             {frontmatter.title}
           </h1>
-
           <div class="mt-2 relative flex items-center gap-x-4">
             <div class="text-sm leading-6 inline-flex items-center gap-3">
               <p class="font-semibold text-zinc-500 font-display uppercase">
@@ -66,7 +62,6 @@ import { AstroSeo } from "@astrolib/seo";
           <p class="text-zinc-500 mt-8">
             <em>{frontmatter.description}</em>
           </p>
-
           <div class="flex flex-wrap gap-6 mt-12">
             {
               frontmatter.tags.map((tag) => (
@@ -77,12 +72,10 @@ import { AstroSeo } from "@astrolib/seo";
             }
           </div>
         </header>
-
         <div
           class="mt-8 max-w-3xl prose prose-p:text-zinc-500 prose-p: prose-headings:text-white prose-headings: prose-headings:font-display prose-strong:text-white prose-strong: prose-code:text-white prose-code: mx-auto prose-ol:text-zinc-500 prose-ul:text-zinc-500 prose-pre:border first-letter:text-7xl first-letter:font-display first-line:uppercase first-line:tracking-widest first-letter:mr-3 first-letter:float-left font-display prose-a: first-line:font-display prose-img:border prose-img:border-white/10 prose-pre:rounded-none">
           <slot />
         </div>
-       
       </div>
     </div>
   </section>
