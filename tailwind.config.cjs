@@ -61,7 +61,7 @@ animation: {
       },
       fontFamily: {
         sans: ["Helvetica", ...defaultTheme.fontFamily.sans],
-display: ["Basement Grotesque ", ...defaultTheme.fontFamily.sans],
+display: ["Basement", ...defaultTheme.fontFamily.sans],
       },
     },
   },
