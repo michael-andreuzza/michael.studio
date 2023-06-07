@@ -13,7 +13,7 @@
     x-data="{ init() {
             new Splide(this.$refs.splide, {
 
-                perPage: 4,
+                perPage: 5,
                 gap: '0rem',
                 breakpoints: {
                     640: {
@@ -88,15 +88,33 @@
             <img
               alt="placeholder image"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/images/work/buio.png"
+              src="/images/work/wb.png"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white">
-              <span class="block font-semibold">Buio</span>
+              <span class="block font-semibold">Wicked Backgrounds</span>
+              <span class="block mt-2 sr-only">wb.</span>
+            </div>
+          </li>
+          <li
+            class="flex justify-center flex-col splide__slide"
+            id="splide01-slide01"
+            role="tabpanel"
+            aria-roledescription="slide"
+            aria-label="1 of 4"
+            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
+            aria-hidden="true">
+            <img
+              alt="placeholder image"
+              class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
+              src="/images/work/bals.png"
+            />
+            <div
+              class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white">
+              <span class="block font-semibold">Built At Lightspeed</span>
               <span class="block mt-2 sr-only"
-                >A free collection of 208 super duper SVG Doodles to spice up
-                your designs! .
-              </span>
+                >A directory of 4000+ templates & UI kits for the modern stack.</span
+              >
             </div>
           </li>
           <li
@@ -122,26 +140,28 @@
             </div>
           </li>
           <li
-            class="flex justify-center flex-col splide__slide"
-            id="splide01-slide01"
+            class="flex justify-center flex-col splide__slide is-prev"
+            id="splide01-slide03"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="1 of 4"
+            aria-label="3 of 4"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
             <img
               alt="placeholder image"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/images/work/bals.png"
+              src="/images/work/buio.png"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white">
-              <span class="block font-semibold">Built At Lightspeed</span>
+              <span class="block font-semibold">Buio</span>
               <span class="block mt-2 sr-only"
-                >A directory of 4000+ templates & UI kits for the modern stack.</span
-              >
+                >A free collection of 208 super duper SVG Doodles to spice up
+                your designs! .
+              </span>
             </div>
           </li>
+
           <li
             class="flex justify-center flex-col splide__slide"
             id="splide01-slide02"
@@ -164,6 +184,7 @@
               </span>
             </div>
           </li>
+
           <li
             class="flex justify-center flex-col splide__slide"
             id="splide01-slide02"
