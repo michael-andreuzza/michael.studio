@@ -55,8 +55,10 @@ animation: {
         },
     extend: {
       colors: {
-        black:"#151515",
-        white:"#e8e1d7",
+        black:"#1e1e1e",
+        white:"#e7e7d8",
+        eagle:"#afac95",
+        carrot:"#ed772f",
 
       },
       fontFamily: {
