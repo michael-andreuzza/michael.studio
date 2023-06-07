@@ -58,7 +58,7 @@ animation: {
         black:"#1e1e1e",
         white:"#e7e7d8",
         eagle:"#afac95",
-        carrot:"#ed772f",
+        carrot:"#ff5800",
 
       },
       fontFamily: {
