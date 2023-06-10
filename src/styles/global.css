@@ -1,19 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --astro-code-color-text: #000000;
-  --astro-code-color-background: #f5f5f5;
-  --astro-code-token-constant: #00000080;
-  --astro-code-token-string: #00000050;
-  --astro-code-token-comment: #00000060;
-  --astro-code-token-keyword: #000000;
-  --astro-code-token-parameter: #000000;
-  --astro-code-token-function: #00000070;
-  --astro-code-token-string-expression: #00000080;
-  --astro-code-token-punctuation: #00000050;
-  --astro-code-token-link: #00000080;
-}/* CSS */
+/* CSS */
 :root { font-family: 'Helvetica', sans-serif; }
 @supports (font-variation-settings: normal) {
   :root { font-family: 'Helvetica var', sans-serif; }
@@ -29,7 +17,8 @@
   descent-override: 0%;
 }
 .gradient-grid {
-background-image: radial-gradient(circle at center center, transparent 0%,rgb(21,21,21) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(21,21,21),rgb(21,21,21));
+
+background-image: radial-gradient(circle at center center, transparent 0%,rgba(255,255,255, 0) 99%),repeating-linear-gradient(0deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(255,255,255, 0),rgba(255,255,255, 0));
 }
 
 .splide__pagination {

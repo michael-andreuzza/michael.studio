@@ -2,10 +2,10 @@
 import { storefront } from "@/data/storefront.json";
 ---
 
-<section class="border-b border-white/20">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<section class="border-b">
+  <div class="mx-auto max-w-7xl border-x">
     <div class="mx-auto px-8 py-12 lg:pt-28 gradient-grid">
-      <h1 class="text-3xl lg:text-7xl font-display text-white uppercase">
+      <h1 class="text-3xl lg:text-7xl font-display text-black uppercase">
         Free and premium digital resources for digital designers and web
         developers.
       </h1>
@@ -13,14 +13,14 @@ import { storefront } from "@/data/storefront.json";
   </div>
 </section>
 
-<section class="border-b border-white/20">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<section class="border-b">
+  <div class="mx-auto max-w-7xl border-x">
     <div
-      class="text-white mx-auto gap-0.5 grid sm:grid-cols-2 md:grid-cols-4 text-xs grid-cols-1">
+      class="text-black mx-auto gap-0.5 grid sm:grid-cols-2 md:grid-cols-4 text-xs grid-cols-1">
       {
         storefront.map((template) => (
           <>
-            <div class="relative group rounded-2xl  overflow-hidden bg-white/20">
+            <div class="relative group rounded-2xl  overflow-hidden bg-zinc-100">
               <div class="relative divide-y divide-white/20">
                 <div class="p-4  " />
                 <div class="w-full  group-hover:opacity-75 relative">
@@ -31,15 +31,15 @@ import { storefront } from "@/data/storefront.json";
                   />
                 </div>
                 <div class="w-full flex flex-col">
-                  <div class="order-last xl:ml-auto border-t-2 border-black pt-2 p-4">
-                    <h4 class="text-sm text-white">
+                  <div class="order-last xl:ml-auto border-t-2  pt-2 p-4">
+                    <h4 class="text-sm text-black">
                       <span class="absolute inset-0" /> {template.description}
                     </h4>
                   </div>
                   <div class="p-4 w-full flex">
                     <a
                       href={template.link}
-                      class="items-center w-full text-white inline-flex focus:outline-none justify-between">
+                      class="items-center w-full text-black inline-flex focus:outline-none justify-between">
                       <span class="absolute inset-0" aria-hidden="true" />
                       <span class="text-base">{template.name}</span>
                       <span class="text-sm block">{template.price}</span>
