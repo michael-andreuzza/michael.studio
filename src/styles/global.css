@@ -16,7 +16,7 @@
   font-style: normal;
   descent-override: 0%;
 }
-.gradient-grid {
+.  {
 
 background-image: radial-gradient(circle at center center, transparent 0%,rgba(255,255,255, 0) 99%),repeating-linear-gradient(0deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(255,255,255, 0),rgba(255,255,255, 0));
 }

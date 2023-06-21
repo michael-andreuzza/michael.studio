@@ -56,8 +56,7 @@ animation: {
     extend: {
       colors: {
         black:"#1e1e1e",
-
-        eagle:"#afac95",
+        orange:"#ff2700",
         blue:"#0000ff",
 
       },
